@@ -1,5 +1,7 @@
 import Profile from './components/profile/profile.jsx';
 import userData from './components/profile/userData.json';
+import FriendList from './components/friendList/FriendList.jsx';
+import friendsData from './components/friendList/friendsData.json';
 
 export default function App() {
   return (
@@ -11,6 +13,8 @@ export default function App() {
         image={userData.avatar}
         status={userData.stats}
       />
+
+      <FriendList friends={friendsData} />
     </>
   );
 }
