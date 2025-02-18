@@ -5,10 +5,7 @@ export default function FriendList({ friends }) {
   return (
     <ul className={css.friendList}>
       {friends.map(friend => {
-        let status = friend.isOnline ? 'Online' : 'Offline';
-        return (
-          <FriendListItem friend={friend} status={status} key={friend.id} />
-        );
+        return <FriendListItem friend={friend} key={friend.id} />;
       })}
     </ul>
   );
